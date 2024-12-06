@@ -1,6 +1,13 @@
 package co.edu.uptc.model;
 
 public class Sala {
+
+     private String nombre1;
+
+
+
+
+
     private int id;
     private String nombre;
     private int capMaxima;

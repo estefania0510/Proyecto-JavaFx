@@ -13,7 +13,7 @@ import com.google.gson.reflect.TypeToken;
 public class CrearUserPresenter {
     private final FileManagement<User> fileManager;
     private RegisterController view;
-    private final String usersFilePath = "src/main/java/co/edu/uptc/persistence/users.json";
+    private final String usersFilePath = "Proyecto-JavaFx/proyecto_final_javafx/src/main/java/co/edu/uptc/persistence/users.json";
     private final Type userListType = new TypeToken<List<User>>() {}.getType();
 
     public CrearUserPresenter(RegisterController view) {
