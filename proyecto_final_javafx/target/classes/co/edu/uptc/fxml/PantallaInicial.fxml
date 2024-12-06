@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?> 
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
+fx:controller="co.edu.uptc.view.PantallaInicialController" stylesheets="resources.co.edu.uptc.view.css.style">
+    <Label text="¡Tu comodidad es lo más importante!" />
+    <Label text="PRODUCTOS" />
+    <Button text="Tennis" fx:id="btnTennis" />
+    <Button text="Elementos Deportivos" fx:id="btnElementos" />
+    <Button text="Conjuntos Deportivos" fx:id="btnConjuntos" />
+    <Button text="Suplementos" fx:id="btnSuplementos" />
+    <Button text="Devolver" fx:id="btnBack" />
+</VBox>
