@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
-fx:controller="co.edu.uptc.view.PantallaInicialController">
+fx:controller="co.edu.uptc.view.PantallaInicialView">
     <Label text="¡Tu comodidad es lo más importante!" />
     <Label text="PRODUCTOS" />
     <HBox spacing="10" alignment="CENTER">

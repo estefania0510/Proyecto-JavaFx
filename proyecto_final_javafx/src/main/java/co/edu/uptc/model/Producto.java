@@ -8,8 +8,10 @@ public class Producto {
     private double price;
     private String categoria;
     private static int nextId = 1;
+
     public Producto() {
     }
+
     public Producto(int id, String nombre, int stock,String description, double price, String categoria) {
         this.id = nextId++;
         this.nombre = nombre;
@@ -18,6 +20,7 @@ public class Producto {
         this.price = price;
         this.categoria = categoria;
     }
+
     public int getId() {
         return id;
     }
@@ -58,9 +61,11 @@ public class Producto {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
+
+    
     @Override
     public String toString() {
-        return "  Producto\n"+"Id:" + id + "\nNombre:" + nombre + "\nStock:" + stock + "\nDescripción:" + description
+        return " \n Producto\n"+"Id:" + id + "\nNombre:" + nombre + "\nStock:" + stock + "\nDescripción:" + description
                 + "\nPrecio:" + price + "\nCategoria:" + categoria ;
     }
     

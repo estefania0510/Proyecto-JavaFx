@@ -6,7 +6,7 @@
 
 
 <VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
-fx:controller="co.edu.uptc.view.AdminController">
+fx:controller="co.edu.uptc.view.AdminView">
     <Label text="Inventario Productos" />
     <Label text="Bienvenido Administrador..... ¿Qué desea realizar?" />
     <!-- Aquí están los botones en un HBox -->

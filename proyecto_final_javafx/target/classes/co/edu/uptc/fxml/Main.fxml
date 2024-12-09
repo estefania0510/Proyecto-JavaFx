@@ -2,17 +2,25 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?> 
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.paint.Color?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
 
-<VBox spacing="15" alignment="CENTER" style="-fx-background-color: #f0f8ff; -fx-padding: 20;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uptc.view.Main">
-    <Label text="Stev Sport" fx:id="btnTexto" />
-    
-    <Button text="Crear Cuenta" fx:id="btnRegister" >
-        
-    </Button>
-    
-    <Button text="Iniciar Sesión" fx:id="btnLogin">
-        
-    </Button>
-</VBox>
+
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uptc.view.Main">
+    <top>
+        <HBox styleClass="topMain" alignment="CENTER">
+            <!-- Título centrado en el encabezado -->
+            <Label text="Stev Sport" fx:id="btnTextoMain" />
+        </HBox>
+    </top>
+
+    <!-- Contenido central -->
+    <center>
+        <!-- Botones centrados en el HBox -->
+        <VBox spacing="10" alignment="CENTER_RIGHT" fx:id="btnBotones" >
+            <Button text="Crear Cuenta" fx:id="btnRegister" />
+            <Button text="Iniciar Sesión" fx:id="btnLogin" />
+        </VBox>
+    </center>
+</BorderPane>

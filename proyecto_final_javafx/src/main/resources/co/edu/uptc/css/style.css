@@ -1,33 +1,64 @@
-#btnRegister{
-    -fx-background-color: aqua;
+#btnRegister:hover, #btnLogin:hover{
+    -fx-background-color:  #6d3191;
 
 }
 
-#btnTexto{
-    -fx-background-color: red;
+
+#btnBotones{
+    -fx-padding: 150px;
 }
 
-#btnLogin{
-    -fx-background-color: aqua;
+/* Estilos para el encabezado */
+#btnTextoMain, #btnLoginLogin , #btnRegisterTop  {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-family: "Arial";
 }
 
-#btnElementos{
-    -fx-background-color: green;
+
+
+/* Estilos para el HBox en el encabezado */
+.topMain , .topLogin, .topRegister {
+    -fx-border-style: dashed;       /* Borde punteado */
+    -fx-border-width: 0.5px;          /* Grosor del borde */
+    -fx-border-color: rgb(123, 0, 172);        /* Color del borde */
+    -fx-background-color: #6d3191;  /* Color de fondo */
+    -fx-padding: 10px; 
 }
 
-#btnTennis{
-    -fx-background-color: green;
+/* Estilos para el VBox que contiene los botones */
+.center VBox {
+    spacing: 15px;
+    -fx-alignment: center;
 }
 
-#btnConjuntos{
-    -fx-background-color: green;
+/* Estilos para los botones */
+#btnRegister, #btnLogin, #btnNext, #btnSave {
+    -fx-font-size: 14px;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-margin-top: 20px; /* Solo funciona con VBox en JavaFX 19+ */
 }
 
-#btnSuplementos{
-    -fx-background-color: green;
-}
 #btnBack{
-    -fx-background-color: red;
-
+    -fx-margin-top: 10px;
+    -fx-font-size: 14px;
+    -fx-background-color: #51becc;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
 }
+
+
+
+
+
+
 

@@ -1,12 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
 
-<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uptc.view.LoginController">
-    <Label text="Usuario:" />
-    <TextField fx:id="txtUser" />
-    <Label text="Contraseña:" />
-    <TextField fx:id="txtPass" />
-    <Button text="Siguiente" fx:id="btnNext" />
-    <Button text="Volver" fx:id="btnBack" />
-</VBox>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uptc.view.LoginView">
+    <!-- Encabezado en la parte superior -->
+    <top>
+        <HBox alignment="CENTER" styleClass="topLogin">
+            <Label text="Iniciar Sesión" fx:id="btnLoginLogin" />
+        </HBox>
+    </top>
+
+    <!-- Contenido principal en el centro -->
+    <center>
+        <!-- Contenedor vertical para organizar los campos y botones -->
+        <VBox spacing="10" alignment="CENTER">
+            <!-- Campos de entrada -->
+            <HBox spacing="50" alignment="CENTER">
+                <Label text="Usuario:" />
+                <TextField fx:id="txtUser" />
+            </HBox>
+            <HBox spacing="35" alignment="CENTER">
+                <Label text="Contraseña:" />
+                <TextField fx:id="txtPass" />
+            </HBox>
+
+            <Region fx:id="spacer" prefHeight="20" />
+
+
+            <!-- Botones -->
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Siguiente" fx:id="btnNext" />
+                <Button text="Volver" fx:id="btnBack" />
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>
