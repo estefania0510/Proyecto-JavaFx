@@ -1,0 +1,33 @@
+#btnRegister{
+    -fx-background-color: aqua;
+
+}
+
+#btnTexto{
+    -fx-background-color: red;
+}
+
+#btnLogin{
+    -fx-background-color: aqua;
+}
+
+#btnElementos{
+    -fx-background-color: green;
+}
+
+#btnTennis{
+    -fx-background-color: green;
+}
+
+#btnConjuntos{
+    -fx-background-color: green;
+}
+
+#btnSuplementos{
+    -fx-background-color: green;
+}
+#btnBack{
+    -fx-background-color: red;
+
+}
+

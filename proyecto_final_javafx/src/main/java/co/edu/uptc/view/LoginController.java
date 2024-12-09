@@ -2,7 +2,6 @@ package co.edu.uptc.view;
 
 
 import co.edu.uptc.App;
-import co.edu.uptc.model.Sala;
 import co.edu.uptc.model.User;
 import co.edu.uptc.presenter.LoginPresenter;
 import javafx.fxml.FXML;
@@ -30,7 +29,6 @@ public class LoginController {
     private Button btnBack;
 
     private LoginPresenter presenter;
-    private User user;
 
     @FXML
     public void initialize() {
@@ -50,16 +48,13 @@ public class LoginController {
         btnBack.setOnAction(event -> App.switchScene("Main.fxml"));
         
     }
-    public void updateListView(java.util.List<Sala> salas) {
-        listView.getItems().setAll(user);
-    }
 
-    public void showError(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    public void mostrarExito(String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Éxito");
+        alerta.setHeaderText(null); // Sin encabezado
+        alerta.setContentText(mensaje); // Mensaje personalizado
+        alerta.showAndWait(); // Muestra el cuadro de diálogo y espera
     }
 
      public void mostrarError( String mensaje) {

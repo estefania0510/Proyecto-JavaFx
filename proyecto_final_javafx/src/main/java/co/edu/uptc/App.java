@@ -5,13 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
-
-/**
- * JavaFX App
- */
-
- public class App extends Application {
+public class App extends Application {
 
     private static Stage mainStage;
 
@@ -28,7 +22,8 @@ import javafx.stage.Stage;
     public static void switchScene(String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(App.class.getResource("fxml/" + fxmlFile));
-            Scene scene = new Scene(loader.load());
+            Scene scene = new Scene(loader.load(), 640, 480);
+            scene.getStylesheets().add(App.class.getResource("/co/edu/uptc/css/style.css").toExternalForm());
             mainStage.setScene(scene);         
             mainStage.show();
         } catch (Exception e) {
@@ -36,5 +31,3 @@ import javafx.stage.Stage;
         }
     }
 }
-
-

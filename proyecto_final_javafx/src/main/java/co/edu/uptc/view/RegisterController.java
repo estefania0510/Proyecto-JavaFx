@@ -37,6 +37,13 @@ public class RegisterController {
         txtUser.clear();
         txtPass.clear();
     }
+    public void mostrarExito(String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Éxito");
+        alerta.setHeaderText(null); // Sin encabezado
+        alerta.setContentText(mensaje); // Mensaje personalizado
+        alerta.showAndWait(); // Muestra el cuadro de diálogo y espera
+    }
     public void mostrarError( String mensaje) {
         Alert alerta = new Alert(AlertType.ERROR);
         alerta.setTitle("ERROR");

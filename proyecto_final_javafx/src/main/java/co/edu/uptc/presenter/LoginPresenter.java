@@ -10,14 +10,14 @@ import java.util.List;
 import com.google.gson.reflect.TypeToken;
 
 public class LoginPresenter {
-    //private LoginController view;
+    private LoginController view;
     private List<User> users;
     private final FileManagement<User> fileManager;
     private final String usersFilePath = "Proyecto-JavaFx/proyecto_final_javafx/src/main/java/co/edu/uptc/persistence/users.json";
     private final Type userListType = new TypeToken<List<User>>() {}.getType();
 
     public LoginPresenter(LoginController view) {
-        //this.view = view;
+        this.view = view;
         this.fileManager = new FileManagement<>();
         
     }
@@ -29,6 +29,7 @@ public class LoginPresenter {
         // Buscar si las credenciales son válidas
         for (User usuario : users) {
             if (usuario.getUser().equals(user) && usuario.getPassword().equals(password)) {
+                view.mostrarExito("Haz Iniciado sesión como " + user);
                 return true; // Credenciales válidas
             }
         }

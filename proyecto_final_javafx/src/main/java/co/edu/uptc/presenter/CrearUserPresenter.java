@@ -35,7 +35,7 @@ public class CrearUserPresenter {
         List<User> usuarios = fileManager.readObjects(usersFilePath,userListType);
         usuarios.add(new User(user,password));
         fileManager.saveObject(usuarios, usersFilePath, userListType);
-
+        view.mostrarExito("El usuario ha sido creado con éxito!!");
         view.clearFields();
     }
 

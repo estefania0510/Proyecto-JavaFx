@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uptc.view.FacturaController">
+    <Label text="FACTURA" />
+    <Label text="Ingrese el nombre del cliente:" />
+    <TextField fx:id="txtUser" />
+    <ListView fx:id="listView" />
+    <Label text="Dirección:" />
+    <TextField fx:id="txtDir" />
+    <Label fx:id="lblCalculatedValue" text="Precio Total: " />
+    <Button text="Generar Factura" fx:id="btnFact" />
+    <Button text="Volver" fx:id="btnBack" />
+</VBox>

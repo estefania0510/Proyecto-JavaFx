@@ -2,11 +2,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.control.Label?> 
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 
-<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uptc.view.AdminController">
-     <Label text="Inventario Productos" />
-    <Label text="Bienvienido Administrador..... ¿Que desea realizar?" />
-    <Button text="Agregar Producto" fx:id="btnAdd" />
-    <Button text="Ver Producto" fx:id="btnView" />
-    <Button text="Regresar" fx:id="btnBack" />
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
+fx:controller="co.edu.uptc.view.AdminController">
+    <Label text="Inventario Productos" />
+    <Label text="Bienvenido Administrador..... ¿Qué desea realizar?" />
+    <!-- Aquí están los botones en un HBox -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Agregar Producto" fx:id="btnAdd" />
+        <Button text="Ver Producto" fx:id="btnView" />
+         <Button text="Ordenes" fx:id="btnOrden" />
+        <Button text="Regresar" fx:id="btnBack" />
+    </HBox>
 </VBox>

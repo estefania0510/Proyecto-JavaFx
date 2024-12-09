@@ -1,6 +1,6 @@
 package co.edu.uptc.presenter;
 
-import co.edu.uptc.model.Sala;
+import co.edu.uptc.model.Producto;
 import co.edu.uptc.util.FileManagement;
 import co.edu.uptc.view.EditarYeliminarController;
 
@@ -11,35 +11,38 @@ import com.google.gson.reflect.TypeToken;
 
 public class EditarYeliminarPresenter {
     private EditarYeliminarController view;
-    private List<Sala> salas;
-    private final FileManagement<Sala> fileManager;
-    private final String salasFilePath = "src/main/java/co/edu/uptc/persistence/salas.json";
-    private final Type salaListType = new TypeToken<List<Sala>>() {}.getType();
+    private List<Producto> productos;
+    private final FileManagement<Producto> fileManager;
+    private final String productosFilePath = "Proyecto-JavaFx/proyecto_final_javafx/src/main/java/co/edu/uptc/persistence/productos.json";
+    private final Type productoListType = new TypeToken<List<Producto>>() {}.getType();
 
     public EditarYeliminarPresenter(EditarYeliminarController view) {
         this.view = view;
         this.fileManager = new FileManagement<>();
-        loadPersons();
+        loadProductos();
     }
 
-    public void loadPersons() {
-        salas = fileManager.readObjects(salasFilePath, salaListType);
-        view.updateListView(salas);
+    public void loadProductos() {
+        productos = fileManager.readObjects(productosFilePath, productoListType);
+        view.updateListView(productos);
     }
 
-    public void handleEdit(Sala sala, String newName, int newCap) {
-        sala.setNombre(newName);
-        sala.setCapMaxima(newCap);
+    public void handleEdit(Producto producto, String newName, int newStock,String newDescrip, Double newPrice,String newCateg) {
+        producto.setNombre(newName);
+        producto.setstock(newStock);
+        producto.setDescription(newDescrip);
+        producto.setPrice(newPrice);
+        producto.setCategoria(newCateg);
         saveChanges();
     }
 
-    public void handleDelete(Sala sala) {
-        salas.remove(sala);
+    public void handleDelete(Producto producto) {
+        productos.remove(producto);
         saveChanges();
     }
 
     private void saveChanges() {
-        fileManager.saveObject(salas, salasFilePath,salaListType);
-        loadPersons();
+        fileManager.saveObject(productos, productosFilePath,productoListType);
+        loadProductos();
     }
 }

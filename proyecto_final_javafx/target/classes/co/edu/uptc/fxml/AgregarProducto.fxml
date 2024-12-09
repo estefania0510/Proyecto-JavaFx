@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uptc.view.CrearProductoController">
+    <Label text="¡¡Agregar Productos!!" />
+    <Label text="Nombre:" />
+    <TextField fx:id="txtName" />
+    <Label text="Stock(Cantidad de productos):" />
+    <TextField fx:id="txtStock" />
+    <Label text="Descripción del producto:" />
+    <TextField fx:id="txtDescrip" />
+     <Label text="Precio:" />
+    <TextField fx:id="txtPrice" />
+     <Label text="Categoría del producto:" />
+    <TextField fx:id="txtCateg" />
+    <Button text="Guardar" fx:id="btnSave" />
+    <Button text="Volver" fx:id="btnBack" />
+</VBox>
